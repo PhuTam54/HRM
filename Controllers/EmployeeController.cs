@@ -92,7 +92,7 @@ namespace HRM.Controllers
                 return StatusCode(500, ModelState);
             }
 
-            return NoContent();
+            return Ok(updatedUser);
         }
 
         [HttpDelete]
@@ -115,7 +115,7 @@ namespace HRM.Controllers
                 ModelState.AddModelError("", "Something went wrong deleting User!");
             }
 
-            return NoContent();
+            return Ok(userToDelete);
         }
 
         [HttpPost]
